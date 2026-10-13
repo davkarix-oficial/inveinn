@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>DAVKARIX — Sistemas de Identificación Avanzados</title>
+<meta name="description" content="Software a medida, inventarios y activos con códigos QR, automatización de procesos e inteligencia artificial para empresas e instituciones en México.">
+<meta name="theme-color" content="#071A2B">
+<link rel="canonical" href="https://davkarix-oficial.github.io/index.html">
+<link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="DAVKARIX">
+<meta property="og:title" content="DAVKARIX — Sistemas de Identificación Avanzados">
+<meta property="og:description" content="Software a medida, inventarios y activos con códigos QR, automatización de procesos e inteligencia artificial para empresas e instituciones en México.">
+<meta property="og:url" content="https://davkarix-oficial.github.io/index.html">
+<meta property="og:image" content="https://davkarix-oficial.github.io/img/og.png">
+<meta property="og:locale" content="es_MX">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<style>/* DAVKARIX — Sistemas de Identificación Avanzados */
+:root{
+  --navy:#071A2B; --navy2:#0B2438; --navy3:#102F47;
+  --teal:#00B8A9; --teal-hi:#2DD4C4; --teal-ink:#007A70;
+  --white:#fff; --ink:#0B1F30; --soft:#F2FBFA; --line:#DCE8EA;
+  --mute-d:#9DB3C6; --mute-l:#4F6578;
+  --radius:14px;
+  --font:'Inter',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;
+  --display:'Space Grotesk','Inter',system-ui,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{font-family:var(--font);color:var(--ink);background:var(--white);line-height:1.6;font-size:16px;overflow-x:hidden}
+img,svg{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+h1,h2,h3,h4{font-family:var(--display);line-height:1.12;letter-spacing:-.02em}
+.container{width:min(1180px,calc(100% - 40px));margin:0 auto}
+.skip{position:absolute;left:-999px;top:8px;background:var(--teal);color:var(--navy);padding:8px 14px;border-radius:8px;z-index:999;font-weight:700}
+.skip:focus{left:8px}
+:focus-visible{outline:3px solid var(--teal-hi);outline-offset:3px;border-radius:6px}
+
+/* ICONOS */
+.ico{width:24px;height:24px;stroke:currentColor;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;flex:none}
+.ico-box{width:46px;height:46px;border-radius:12px;display:grid;place-items:center;background:rgba(0,184,169,.12);color:var(--teal-ink);border:1px solid rgba(0,184,169,.28)}
+.dark .ico-box{color:var(--teal-hi);background:rgba(0,184,169,.1);border-color:rgba(0,184,169,.3)}
+
+/* NAV */
+.nav{position:fixed;inset:0 0 auto 0;z-index:100;background:rgba(7,26,43,.86);backdrop-filter:blur(16px);border-bottom:1px solid rgba(255,255,255,.08)}
+.nav-in{height:70px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.brand{display:flex;align-items:center;gap:11px;color:#fff}
+.brand-mark{width:38px;height:38px;border-radius:10px;display:grid;place-items:center;font-family:var(--display);font-weight:800;color:var(--navy);background:linear-gradient(135deg,var(--teal),var(--teal-hi));box-shadow:0 0 28px rgba(0,184,169,.28)}
+.brand-name{font-family:var(--display);font-weight:700;font-size:18px;letter-spacing:.02em;line-height:1}
+.brand-name small{display:block;font-family:var(--font);font-weight:600;font-size:8.5px;letter-spacing:.14em;color:var(--teal-hi);margin-top:5px;text-transform:uppercase}
+.nav-links{display:flex;align-items:center;gap:26px;font-size:14.5px;color:var(--mute-d)}
+.nav-links a{padding:6px 0;border-bottom:2px solid transparent}
+.nav-links a:hover,.nav-links a[aria-current="page"]{color:#fff;border-bottom-color:var(--teal)}
+.menu-btn{display:none;background:none;border:1px solid rgba(255,255,255,.2);color:#fff;border-radius:10px;width:44px;height:44px;cursor:pointer}
+.menu-btn .ico{margin:auto}
+
+/* BOTONES */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;padding:13px 22px;border-radius:10px;font-weight:700;font-size:15px;border:1.5px solid transparent;cursor:pointer;transition:transform .15s,filter .15s,background .15s;font-family:var(--font);line-height:1.2}
+.btn:hover{transform:translateY(-2px)}
+.btn-primary{background:var(--teal);color:var(--navy);box-shadow:0 10px 30px rgba(0,184,169,.25)}
+.btn-primary:hover{filter:brightness(1.07)}
+.btn-ghost{border-color:rgba(255,255,255,.28);color:#fff;background:rgba(255,255,255,.04)}
+.btn-ghost:hover{border-color:var(--teal)}
+.btn-outline{border-color:var(--navy);color:var(--navy);background:transparent}
+.btn-outline:hover{background:var(--navy);color:#fff}
+.btn-wa{background:#25D366;color:#06210f}
+.btn-sm{padding:10px 16px;font-size:14px}
+.btn[disabled]{opacity:.6;cursor:not-allowed;transform:none}
+
+/* SECCIONES */
+.section{padding:96px 0}
+.section.dark{background:var(--navy);color:#fff}
+.section.dark2{background:var(--navy2);color:#fff}
+.section.soft{background:var(--soft)}
+.section-head{max-width:720px;margin-bottom:46px}
+.section-head.center{margin-left:auto;margin-right:auto;text-align:center}
+.kicker{font-size:12px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--teal-ink);margin-bottom:12px}
+.dark .kicker,.dark2 .kicker{color:var(--teal-hi)}
+.section-head h2{font-size:clamp(30px,4vw,44px);margin-bottom:14px}
+.section-head p{color:var(--mute-l);font-size:17px}
+.dark .section-head p,.dark2 .section-head p{color:var(--mute-d)}
+.lead{font-size:18px;color:var(--mute-l)}
+.dark .lead{color:var(--mute-d)}
+
+/* HERO */
+.hero{position:relative;background:var(--navy);color:#fff;padding:150px 0 90px;overflow:hidden}
+.hero::before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 12% -10%,rgba(0,184,169,.22),transparent 38%),radial-gradient(circle at 92% 8%,rgba(45,212,196,.12),transparent 32%);pointer-events:none}
+.hero::after{content:"";position:absolute;inset:0;opacity:.3;background-image:linear-gradient(rgba(255,255,255,.04) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.04) 1px,transparent 1px);background-size:56px 56px;mask-image:linear-gradient(to bottom,#000,transparent 80%);pointer-events:none}
+.hero .container{position:relative;z-index:1}
+.hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:60px;align-items:center}
+.hero h1{font-size:clamp(38px,5.6vw,68px);letter-spacing:-.035em;margin-bottom:20px}
+.hero h1 em{font-style:normal;background:linear-gradient(90deg,var(--teal),var(--teal-hi));-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero .lead{color:#C2D3E0}
+.hero p.lead{max-width:560px;margin-bottom:30px}
+.hero-actions{display:flex;gap:12px;flex-wrap:wrap}
+.pill{display:inline-flex;align-items:center;gap:8px;border:1px solid rgba(0,184,169,.35);background:rgba(0,184,169,.08);color:var(--teal-hi);padding:7px 13px;border-radius:99px;font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;margin-bottom:22px}
+.pill i{width:7px;height:7px;border-radius:50%;background:var(--teal-hi);box-shadow:0 0 10px var(--teal-hi)}
+.hero-note{margin-top:22px;font-size:12.5px;color:var(--mute-d);letter-spacing:.04em}
+.page-hero{padding:130px 0 64px}
+.page-hero h1{font-size:clamp(34px,4.6vw,56px);margin-bottom:16px}
+.crumbs{font-size:13px;color:var(--mute-d);margin-bottom:18px}
+.crumbs a{color:var(--teal-hi);text-decoration:underline;text-underline-offset:3px}
+
+/* TARJETAS */
+.grid{display:grid;gap:20px}
+.g2{grid-template-columns:repeat(2,1fr)}
+.g3{grid-template-columns:repeat(3,1fr)}
+.g4{grid-template-columns:repeat(4,1fr)}
+.card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:28px;transition:transform .2s,box-shadow .2s,border-color .2s;display:flex;flex-direction:column;gap:12px}
+a.card:hover{transform:translateY(-4px);border-color:var(--teal);box-shadow:0 18px 44px -18px rgba(7,26,43,.25)}
+.card h3{font-size:19px}
+.card p{color:var(--mute-l);font-size:15px}
+.card .more{margin-top:auto;color:var(--teal-ink);font-weight:700;font-size:14px;display:inline-flex;align-items:center;gap:6px}
+.dark .card,.dark2 .card{background:var(--navy3);border-color:rgba(255,255,255,.09)}
+.dark .card p,.dark2 .card p{color:var(--mute-d)}
+.dark a.card:hover,.dark2 a.card:hover{border-color:var(--teal)}
+.dark .card .more{color:var(--teal-hi)}
+.num{font-family:var(--display);font-weight:700;font-size:13px;color:var(--teal-ink);letter-spacing:.1em}
+.dark .num{color:var(--teal-hi)}
+.checks{list-style:none;display:grid;gap:10px}
+.checks li{display:flex;gap:10px;align-items:flex-start;font-size:15.5px}
+.checks li::before{content:"";flex:none;width:20px;height:20px;margin-top:2px;border-radius:50%;background:var(--teal) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23071A2B' stroke-width='3.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'/%3E%3C/svg%3E") center/12px no-repeat}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+.split.top{align-items:start}
+
+/* PROCESO */
+.steps{display:grid;grid-template-columns:repeat(5,1fr);gap:16px;counter-reset:s}
+.step{position:relative;border:1px solid var(--line);border-radius:var(--radius);padding:24px 20px;background:#fff}
+.dark .step,.dark2 .step{background:var(--navy3);border-color:rgba(255,255,255,.09)}
+.step .n{font-family:var(--display);font-size:30px;font-weight:700;color:var(--teal);margin-bottom:8px}
+.step h3{font-size:17px;margin-bottom:6px}
+.step p{font-size:14px;color:var(--mute-l)}
+.dark .step p,.dark2 .step p{color:var(--mute-d)}
+
+/* MOCKS (ilustrativos) */
+.mock{border:1px solid rgba(255,255,255,.12);border-radius:16px;background:linear-gradient(150deg,#0F2A41,#081A2B);box-shadow:0 40px 90px rgba(0,0,0,.4);overflow:hidden;color:#fff;font-size:12.5px}
+.light-mock{border-color:var(--line);box-shadow:0 24px 60px -24px rgba(7,26,43,.35)}
+.mock-top{display:flex;align-items:center;gap:6px;padding:11px 14px;border-bottom:1px solid rgba(255,255,255,.1)}
+.mock-top i{width:8px;height:8px;border-radius:50%;background:#3a5268}
+.mock-top span{margin-left:8px;font-size:11px;color:var(--mute-d)}
+.mock-body{padding:16px}
+.mstats{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:12px}
+.mstat{border:1px solid rgba(255,255,255,.1);border-radius:9px;padding:9px 11px;background:rgba(255,255,255,.03)}
+.mstat b{display:block;font-family:var(--display);font-size:20px}
+.mstat small{color:var(--mute-d);font-size:10px;letter-spacing:.08em;text-transform:uppercase}
+.mrow{display:grid;grid-template-columns:1.5fr 1fr .8fr;gap:8px;padding:9px 10px;border-bottom:1px solid rgba(255,255,255,.08)}
+.mrow.h{color:var(--mute-d);font-size:10px;letter-spacing:.08em;text-transform:uppercase}
+.mrow:last-child{border:0}
+.ok{color:#4ADE80}.warn{color:#FBBF24}
+.mock-note{margin-top:10px;font-size:11px;color:var(--mute-d)}
+.light-note{font-size:12.5px;color:var(--mute-l);margin-top:12px}
+.qrbox{width:120px;height:120px;background:#fff;border:7px solid #fff;border-radius:6px;background-image:repeating-conic-gradient(#0B1F30 0 25%,#fff 0 50%);background-size:22px 22px;margin:auto}
+.codeblk{font-family:ui-monospace,Menlo,Consolas,monospace;font-size:12px;line-height:1.7;color:#BCD0E0;white-space:pre-wrap}
+.codeblk b{color:var(--teal-hi);font-weight:600}
+.flow{display:grid;gap:10px}
+.flow div{display:flex;align-items:center;gap:10px;border:1px solid rgba(255,255,255,.12);border-radius:10px;padding:10px 12px;background:rgba(255,255,255,.04)}
+.flow div::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--teal);box-shadow:0 0 8px var(--teal)}
+.flow .arrow{border:0;background:none;padding:0 0 0 14px;color:var(--teal-hi);font-size:14px}
+.flow .arrow::before{display:none}
+.bars{display:flex;align-items:flex-end;gap:10px;height:120px;padding:6px 4px}
+.bars span{flex:1;background:linear-gradient(180deg,var(--teal-hi),var(--teal));border-radius:6px 6px 0 0}
+.chat{display:grid;gap:10px}
+.bubble{max-width:88%;padding:10px 13px;border-radius:14px;font-size:13.5px;line-height:1.45}
+.bubble.u{justify-self:end;background:var(--teal);color:var(--navy);border-radius:14px 14px 4px 14px;font-weight:500}
+.bubble.b{justify-self:start;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.1);border-radius:14px 14px 14px 4px}
+
+/* PRECIOS */
+.plans{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;align-items:stretch}
+.plan{border:1px solid var(--line);border-radius:var(--radius);padding:30px;background:#fff;display:flex;flex-direction:column;gap:6px}
+.plan.feat{border:2px solid var(--teal);box-shadow:0 22px 60px -26px rgba(0,184,169,.5)}
+.plan .tag{font-size:11px;font-weight:700;letter-spacing:.14em;color:var(--teal-ink);text-transform:uppercase}
+.plan h3{font-size:24px}
+.price{font-family:var(--display);font-size:40px;font-weight:700;margin:10px 0 2px}
+.price small{font-family:var(--font);font-size:13px;color:var(--mute-l);font-weight:500}
+.plan ul{list-style:none;display:grid;gap:8px;margin:14px 0 22px;color:var(--mute-l);font-size:14.5px}
+.plan li::before{content:"✓";color:var(--teal-ink);font-weight:800;margin-right:8px}
+.plan .btn{margin-top:auto}
+.quote-box{border:1.5px dashed var(--teal);background:var(--soft);border-radius:var(--radius);padding:26px;display:flex;gap:18px;align-items:center;justify-content:space-between;flex-wrap:wrap}
+.quote-box h3{font-size:20px;margin-bottom:4px}
+.quote-box p{color:var(--mute-l);font-size:15px}
+
+/* FAQ */
+.faq{display:grid;gap:12px;max-width:860px;margin:0 auto}
+.faq details{border:1px solid var(--line);border-radius:12px;background:#fff;padding:0}
+.faq summary{cursor:pointer;list-style:none;padding:18px 22px;font-weight:700;font-family:var(--display);font-size:17px;display:flex;justify-content:space-between;gap:14px;align-items:center}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";font-size:24px;color:var(--teal-ink);line-height:1}
+.faq details[open] summary::after{content:"–"}
+.faq details p{padding:0 22px 20px;color:var(--mute-l)}
+.dark .faq details{background:var(--navy3);border-color:rgba(255,255,255,.1)}
+.dark .faq details p{color:var(--mute-d)}
+
+/* FORMULARIO */
+.form{display:grid;gap:16px}
+.form .row2{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.field label{display:block;font-weight:600;font-size:14px;margin-bottom:6px}
+.field input,.field select,.field textarea{width:100%;padding:13px 14px;border:1.5px solid var(--line);border-radius:10px;font:inherit;font-size:15px;color:var(--ink);background:#fff}
+.field textarea{min-height:130px;resize:vertical}
+.field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:var(--teal);box-shadow:0 0 0 4px rgba(0,184,169,.15)}
+.field .err{display:none;color:#B42318;font-size:13px;margin-top:5px}
+.field.bad input,.field.bad select,.field.bad textarea{border-color:#B42318}
+.field.bad .err{display:block}
+.hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+.form-actions{display:flex;gap:12px;flex-wrap:wrap}
+.form-msg{display:none;padding:14px 16px;border-radius:10px;font-size:15px}
+.form-msg.show{display:block}
+.form-msg.ok{background:#E8FBF7;border:1px solid #9BE8DD;color:#07524B}
+.form-msg.fail{background:#FEF3F2;border:1px solid #FDA29B;color:#7A271A}
+.side-card{background:var(--navy);color:#fff;border-radius:var(--radius);padding:30px;display:grid;gap:16px}
+.side-card a{color:var(--teal-hi);text-decoration:underline;text-underline-offset:3px}
+
+/* DEMO INVENTARIO */
+.demo{border:1px solid var(--line);border-radius:16px;background:#fff;overflow:hidden;box-shadow:0 24px 60px -30px rgba(7,26,43,.35)}
+.demo-bar{display:flex;gap:10px;padding:14px;border-bottom:1px solid var(--line);background:var(--soft);flex-wrap:wrap;align-items:center}
+.demo-bar input{flex:1;min-width:180px;padding:10px 13px;border:1.5px solid var(--line);border-radius:9px;font:inherit;font-size:14px}
+.demo-bar span{font-size:12.5px;color:var(--mute-l)}
+.demo table{width:100%;border-collapse:collapse;font-size:14px}
+.demo th{text-align:left;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--mute-l);padding:10px 14px;background:#fff;border-bottom:1px solid var(--line)}
+.demo td{padding:11px 14px;border-bottom:1px solid #EEF3F4}
+.demo tbody tr{cursor:pointer}
+.demo tbody tr:hover{background:var(--soft)}
+.demo tbody tr:focus-visible{outline-offset:-3px}
+.tbl-wrap{overflow-x:auto}
+.estado{padding:3px 9px;border-radius:99px;font-size:12px;font-weight:700}
+.estado.a{background:#E8FBF7;color:#07524B}.estado.r{background:#FFF4DB;color:#7A4B00}
+.ficha{position:fixed;inset:0;z-index:300;background:rgba(7,26,43,.7);display:none;align-items:center;justify-content:center;padding:20px}
+.ficha.open{display:flex}
+.ficha-card{background:#fff;border-radius:18px;max-width:380px;width:100%;padding:26px;display:grid;gap:12px;position:relative}
+.ficha-card h3{font-size:20px}
+.ficha-card dl{display:grid;grid-template-columns:auto 1fr;gap:6px 14px;font-size:14px}
+.ficha-card dt{color:var(--mute-l)}
+.ficha-x{position:absolute;right:12px;top:10px;border:0;background:none;font-size:26px;cursor:pointer;color:var(--mute-l)}
+
+/* CTA + FOOTER */
+.cta{background:linear-gradient(135deg,var(--navy),#0A3A4A);color:#fff;text-align:center;padding:96px 0;position:relative;overflow:hidden}
+.cta::before{content:"";position:absolute;left:50%;top:50%;width:640px;height:640px;transform:translate(-50%,-50%);background:radial-gradient(circle,rgba(0,184,169,.2),transparent 65%);pointer-events:none}
+.cta .container{position:relative}
+.cta h2{font-size:clamp(32px,4.4vw,50px);margin-bottom:14px}
+.cta p{color:var(--mute-d);max-width:580px;margin:0 auto 28px;font-size:17px}
+.cta .hero-actions{justify-content:center}
+.footer{background:#04101C;color:var(--mute-d);padding:60px 0 28px;font-size:14.5px}
+.foot-grid{display:grid;grid-template-columns:1.6fr 1fr 1fr 1.2fr;gap:36px;margin-bottom:38px}
+.footer h4{color:#fff;font-size:14px;letter-spacing:.08em;text-transform:uppercase;margin-bottom:14px;font-family:var(--font);font-weight:700}
+.footer ul{list-style:none;display:grid;gap:9px}
+.footer a:hover{color:var(--teal-hi)}
+.foot-bottom{border-top:1px solid rgba(255,255,255,.08);padding-top:20px;display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;font-size:13px}
+.wa-float{position:fixed;right:20px;bottom:20px;width:58px;height:58px;border-radius:50%;background:#25D366;display:grid;place-items:center;box-shadow:0 10px 26px -6px rgba(0,0,0,.5);z-index:90}
+.wa-float:hover{transform:scale(1.06)}
+
+/* LEGAL */
+.prose{max-width:780px;margin:0 auto}
+.prose h2{font-size:24px;margin:34px 0 10px}
+.prose p,.prose li{color:#33485B;margin-bottom:12px}
+.prose ul{padding-left:22px;margin-bottom:12px}
+.prose a{color:var(--teal-ink);text-decoration:underline;text-underline-offset:3px}
+.prose .upd{font-size:13px;color:var(--mute-l)}
+
+/* REVEAL */
+.rv{opacity:0;transform:translateY(18px);transition:opacity .6s ease,transform .6s ease}
+.rv.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}.btn:hover,a.card:hover{transform:none}}
+
+/* RESPONSIVO */
+@media(max-width:1020px){
+  .g4{grid-template-columns:repeat(2,1fr)}
+  .steps{grid-template-columns:repeat(2,1fr)}
+  .foot-grid{grid-template-columns:1fr 1fr}
+}
+@media(max-width:900px){
+  .menu-btn{display:grid}
+  .nav-links{position:fixed;inset:70px 0 auto 0;background:var(--navy);flex-direction:column;align-items:stretch;gap:0;padding:10px 20px 22px;border-bottom:1px solid rgba(255,255,255,.1);transform:translateY(-130%);transition:transform .25s;visibility:hidden}
+  .nav-links.open{transform:none;visibility:visible}
+  .nav-links a{padding:14px 4px;border-bottom:1px solid rgba(255,255,255,.07)}
+  .nav-links .btn{margin-top:14px}
+  .hero-grid,.split{grid-template-columns:1fr;gap:38px}
+  .g3,.plans{grid-template-columns:1fr}
+  .section{padding:72px 0}
+  .hero{padding:118px 0 64px}
+  .page-hero{padding:106px 0 48px}
+}
+@media(max-width:620px){
+  .g2,.g4,.steps,.form .row2{grid-template-columns:1fr}
+  .foot-grid{grid-template-columns:1fr}
+  .container{width:min(100% - 32px,1180px)}
+  .hero-actions .btn,.form-actions .btn{width:100%}
+  .brand-name small{display:none}
+}
+
+/* ===== Ilustraciones: escenas, robot y orbe ===== */
+.scene{width:100%;height:auto;display:block;filter:drop-shadow(0 30px 50px rgba(0,0,0,.35))}
+.scene .fl{animation:flo 6s ease-in-out infinite}
+.scene .fl1{animation-delay:-1.5s}.scene .fl2{animation-delay:-3s}.scene .fl3{animation-delay:-4.5s}
+@keyframes flo{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
+.scene .orb-r{transform-origin:260px 190px;animation:spin 40s linear infinite}
+.scene .r2{animation-duration:70s;animation-direction:reverse}
+@keyframes spin{to{transform:rotate(360deg)}}
+.scene .hexglow{animation:hxg 3.4s ease-in-out infinite}
+@keyframes hxg{0%,100%{filter:drop-shadow(0 0 4px rgba(45,212,196,.3))}50%{filter:drop-shadow(0 0 16px rgba(45,212,196,.8))}}
+.scene .dot{animation:blk 2.8s ease-in-out infinite}.scene .d2{animation-delay:-1s}.scene .d3{animation-delay:-2s}
+@keyframes blk{0%,100%{opacity:.25}50%{opacity:1}}
+.page-hero .scene{max-width:520px;margin-left:auto}
+.gallery .shot{margin:0;background:linear-gradient(150deg,#0F2A41,#081A2B);border:1px solid rgba(45,212,196,.18);border-radius:18px;padding:14px 14px 18px;color:#C2D3E0;box-shadow:0 18px 40px rgba(8,26,43,.18)}
+.gallery .shot .scene{filter:none}
+.gallery figcaption{font-size:14px;line-height:1.5;padding:4px 8px 0}
+.gallery figcaption b{display:block;color:#fff;font-size:16px;margin-bottom:2px}
+
+.ai-visual{position:relative;width:100%;max-width:520px;aspect-ratio:1/1;margin:0 auto}
+.ai-visual .orb{position:absolute;inset:0;width:100%;height:100%}
+.ai-visual .robot-wrap{position:absolute;left:50%;top:52%;width:50%;transform:translate(-50%,-50%)}
+.robot{width:100%;height:auto;display:block;filter:drop-shadow(0 18px 30px rgba(0,0,0,.45))}
+.rb-float{animation:rbf 5s ease-in-out infinite}
+@keyframes rbf{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
+.rb-shadow{animation:rbs 5s ease-in-out infinite;transform-origin:160px 344px}
+@keyframes rbs{0%,100%{transform:scaleX(1);opacity:1}50%{transform:scaleX(.85);opacity:.7}}
+.rb-glow{animation:rbg 2s ease-in-out infinite;transform-origin:160px 24px}
+@keyframes rbg{0%,100%{opacity:.5;transform:scale(.8)}50%{opacity:1;transform:scale(1.15)}}
+.rb-eyes{transform-origin:160px 104px;animation:eyes 5s infinite}
+@keyframes eyes{0%,92%,100%{transform:scaleY(1)}95%{transform:scaleY(.1)}}
+.rb-arm{transform-origin:216px 196px;animation:wave 3.2s ease-in-out infinite}
+@keyframes wave{0%,100%{transform:rotate(0)}50%{transform:rotate(-9deg)}}
+.rb-pulse{stroke-dasharray:130;stroke-dashoffset:130;animation:ecg 2.4s linear infinite}
+@keyframes ecg{to{stroke-dashoffset:-130}}
+.ai-visual .chip{position:absolute;display:inline-flex;align-items:center;gap:6px;background:rgba(15,42,65,.9);border:1px solid rgba(45,212,196,.4);color:#E6F1F8;font-size:12.5px;font-weight:600;padding:7px 12px;border-radius:99px;backdrop-filter:blur(4px);animation:flo 6s ease-in-out infinite}
+.ai-visual .chip .ico{width:15px;height:15px;stroke:#2DD4C4;fill:none;stroke-width:2}
+.ai-visual .c1{left:2%;top:16%}.ai-visual .c2{right:0;top:30%;animation-delay:-2s}.ai-visual .c3{left:6%;bottom:12%;animation-delay:-4s}
+@media (prefers-reduced-motion:reduce){.scene *,.robot *,.ai-visual .chip{animation:none!important}}
+@media (max-width:640px){.ai-visual{max-width:380px}.ai-visual .chip{font-size:11.5px;padding:6px 10px}}
+</style>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Organization", "name": "DAVKARIX", "slogan": "Sistemas de Identificación Avanzados", "url": "https://davkarix-oficial.github.io/", "email": "davkarix.oficial@gmail.com", "areaServed": "MX", "logo": "https://davkarix-oficial.github.io/img/logo.svg", "contactPoint": {"@type": "ContactPoint", "telephone": "+52-55-3938-3342", "contactType": "sales", "availableLanguage": "es"}}</script>
+</head>
+<body>
+<a class="skip" href="#contenido">Saltar al contenido</a>
+<header class="nav">
+  <div class="container nav-in">
+    <a class="brand" href="index.html" aria-label="DAVKARIX, inicio"><span class="brand-mark">DK</span><span class="brand-name">DAVKARIX<small>Sistemas de Identificación Avanzados</small></span></a>
+    <button class="menu-btn" id="menuBtn" aria-label="Abrir menú" aria-expanded="false" aria-controls="navLinks"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+    <nav class="nav-links" id="navLinks" aria-label="Principal"><a href="index.html" aria-current="page">Inicio</a><a href="servicios.html">Servicios</a><a href="ia.html">Inteligencia artificial</a><a href="proyectos.html">Proyectos</a><a href="faq.html">Preguntas</a><a class="btn btn-primary btn-sm" href="cotizar.html">Solicitar cotización</a></nav>
+  </div>
+</header>
+<main id="contenido">
+
+<section class="hero">
+  <div class="container hero-grid">
+    <div>
+      <div class="pill"><i></i>Sistemas de Identificación Avanzados</div>
+      <h1>Tecnología que <em>identifica, controla</em> y automatiza tu operación.</h1>
+      <p class="lead">Desarrollamos software a medida, sistemas de inventario con códigos QR, automatización de procesos e inteligencia artificial para empresas e instituciones en México.</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="cotizar.html">Solicitar cotización <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg></a>
+        <a class="btn btn-ghost" href="servicios.html">Ver servicios</a>
+      </div>
+      <p class="hero-note">Sin instalar nada · Desde cualquier dispositivo · Datos en la nube</p>
+    </div>
+    <div class="rv"><div class="mock"><div class="mock-top"><i></i><i></i><i></i><span>inventario / panel</span></div><div class="mock-body"><div class="mstats"><div class="mstat"><b>1,248</b><small>Bienes</small></div><div class="mstat"><b>982</b><small>Asignados</small></div><div class="mstat"><b>266</b><small>Disponibles</small></div></div><div class="mrow h"><div>Bien</div><div>Responsable</div><div>Estado</div></div><div class="mrow"><div>Laptop 14"</div><div>A. Morales</div><div class="ok">Activo</div></div><div class="mrow"><div>Monitor 24"</div><div>L. Herrera</div><div class="ok">Activo</div></div><div class="mrow"><div>Impresora láser</div><div>S. Ramírez</div><div class="warn">Revisión</div></div><div class="mrow"><div>Escritorio</div><div>C. Vega</div><div class="ok">Activo</div></div><div class="mock-note">Ilustración con datos ficticios</div></div></div></div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="section-head rv"><div class="kicker">Servicios</div><h2>Todo lo que necesitas para ordenar y digitalizar tu operación</h2><p>Desde un sistema a la medida hasta una página web o un asistente con inteligencia artificial. Cada servicio tiene su propia página con ejemplos y alcances.</p></div>
+    <div class="grid g4"><a class="card rv" href="servicios/software-a-medida.html"><div class="ico-box"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><polyline points="8 6 2 12 8 18"/><polyline points="16 6 22 12 16 18"/><line x1="14" y1="4" x2="10" y2="20"/></svg></div><h3>Desarrollo de software a medida</h3><p>Sistemas web diseñados alrededor de tu forma de trabajar, no al revés.</p><span class="more">Ver servicio <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg></span></a><a class="card rv" href="servicios/inventarios-activos.html"><div class="ico-box"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 8l-9-5-9 5v8l9 5 9-5V8z"/><path d="M3 8l9 5 9-5"/><path d="M12 13v8"/></svg></div><h3>Sistemas de inventarios y activos fijos</h3><p>Sabe qué tienes, dónde está y quién lo resguarda, en tiempo real.</p><span class="more">Ver servicio <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg></span></a><a class="card rv" href="servicios/control-qr.html"><div class="ico-box"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><path d="M14 14h3v3h-3zM19 19h2v2h-2zM17 17h2v2h-2z"/></svg></div><h3>Control de bienes mediante códigos QR</h3><p>Un código QR por bien: escaneas con tu celular y ves su ficha al instante.</p><span class="more">Ver servicio <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg></span></a><a class="card rv" href="servicios/automatizacion.html"><div class="ico-box"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M13 2L4 14h7l-1 8 9-12h-7l1-8z"/></svg></div><h3>Automatización de procesos administrativos</h3><p>Quita lo repetitivo: formatos, vales, reportes y avisos que se generan solos.</p><span class="more">Ver servicio <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg></span></a><a class="card rv" href="servicios/paginas-web.html"><div class="ico-box"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15 15 0 0 1 0 20 15 15 0 0 1 0-20z"/></svg></div><h3>Diseño y desarrollo de páginas web</h3><p>Sitios rápidos, claros y listos para que tus clientes te encuentren y te contacten.</p><span class="more">Ver servicio <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg></span></a><a class="card rv" href="servicios/soporte.html"><div class="ico-box"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l8 3v6c0 5-3.5 9-8 11-4.5-2-8-6-8-11V5l8-3z"/><polyline points="8.5 12 11 14.5 15.5 9.5"/></svg></div><h3>Soporte y mantenimiento tecnológico</h3><p>Tus sistemas siguen funcionando: correcciones, ajustes y atención cuando la necesitas.</p><span class="more">Ver servicio <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg></span></a><a class="card rv" href="servicios/datos-reportes.html"><div class="ico-box"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 3v18h18"/><path d="M7 15v3M12 10v8M17 6v12"/></svg></div><h3>Bases de datos, reportes y tableros</h3><p>Convierte tus datos dispersos en información clara para decidir.</p><span class="more">Ver servicio <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg></span></a><a class="card rv" href="servicios/consultoria.html"><div class="ico-box"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M16 8l-2 6-6 2 2-6 6-2z"/></svg></div><h3>Consultoría y digitalización empresarial</h3><p>Un plan claro para digitalizar tu operación, empezando por lo que más impacto tiene.</p><span class="more">Ver servicio <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg></span></a></div>
+  </div>
+</section>
+
+<section class="section dark">
+  <div class="container split">
+    <div class="rv">
+      <div class="kicker">Inteligencia artificial</div>
+      <h2 style="font-size:clamp(30px,4vw,44px);margin-bottom:16px">Asistentes que trabajan con tus datos, con tu control.</h2>
+      <p class="lead" style="margin-bottom:22px">Integramos asistentes en lenguaje natural a tus sistemas: consultan información, leen documentos y proponen acciones que tú confirmas antes de que se apliquen.</p>
+      <ul class="checks" style="margin-bottom:28px"><li>Consultas en español sobre tu inventario o tus documentos</li><li>Lectura de PDFs y fotos para comparar contra tu base de datos</li><li>Acciones con confirmación: nada cambia sin tu visto bueno</li></ul>
+      <a class="btn btn-primary" href="ia.html">Conocer soluciones de IA <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg></a>
+    </div>
+    <div class="rv"><div class="ai-visual" role="img" aria-label="Robot y esfera de luz que representan la inteligencia artificial"><canvas class="orb " aria-hidden="true"></canvas><div class="robot-wrap"><svg class="robot" viewBox="0 0 320 360" role="img" aria-label="Robot asistente de inteligencia artificial" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<linearGradient id="rbH" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FFFFFF"/><stop offset="1" stop-color="#CFE0EA"/></linearGradient>
+<linearGradient id="rbB" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#F4FAFD"/><stop offset="1" stop-color="#B9CFDC"/></linearGradient>
+<radialGradient id="rbG" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="#2DD4C4" stop-opacity=".9"/><stop offset="1" stop-color="#2DD4C4" stop-opacity="0"/></radialGradient>
+</defs>
+<ellipse class="rb-shadow" cx="160" cy="344" rx="74" ry="10" fill="#000" fill-opacity=".38"/>
+<g class="rb-float">
+  <line x1="160" y1="54" x2="160" y2="30" stroke="#8FA6BA" stroke-width="4" stroke-linecap="round"/>
+  <circle class="rb-glow" cx="160" cy="24" r="22" fill="url(#rbG)"/>
+  <circle cx="160" cy="24" r="8" fill="#2DD4C4"/>
+  <circle cx="86" cy="106" r="13" fill="#00B8A9"/><circle cx="234" cy="106" r="13" fill="#00B8A9"/>
+  <rect x="92" y="54" width="136" height="106" rx="36" fill="url(#rbH)"/>
+  <rect x="108" y="70" width="104" height="72" rx="26" fill="#071A2B"/>
+  <rect x="108" y="70" width="104" height="72" rx="26" fill="none" stroke="#2DD4C4" stroke-opacity=".35"/>
+  <g class="rb-eyes"><rect x="131" y="92" width="15" height="24" rx="7.5" fill="#2DD4C4"/><rect x="174" y="92" width="15" height="24" rx="7.5" fill="#2DD4C4"/></g>
+  <path d="M147 126 q13 9 26 0" fill="none" stroke="#2DD4C4" stroke-width="3.2" stroke-linecap="round"/>
+  <rect x="146" y="160" width="28" height="12" rx="4" fill="#8FA6BA"/>
+  <rect x="102" y="170" width="116" height="108" rx="32" fill="url(#rbB)"/>
+  <rect x="128" y="192" width="64" height="44" rx="12" fill="#071A2B"/>
+  <polyline class="rb-pulse" points="136,216 148,216 154,203 163,229 171,210 177,216 184,216" fill="none" stroke="#2DD4C4" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="140" cy="250" r="4" fill="#00B8A9"/><circle cx="160" cy="250" r="4" fill="#2DD4C4"/><circle cx="180" cy="250" r="4" fill="#9DB3C6"/>
+  <path d="M104 196 Q74 222 82 256" fill="none" stroke="#CFE0EA" stroke-width="20" stroke-linecap="round"/>
+  <circle cx="82" cy="262" r="12" fill="#F4FAFD"/>
+  <path class="rb-arm" d="M216 196 Q256 196 272 150" fill="none" stroke="#CFE0EA" stroke-width="20" stroke-linecap="round"/>
+  <circle cx="274" cy="142" r="12" fill="#F4FAFD"/>
+  <rect x="124" y="278" width="26" height="40" rx="12" fill="#B9CFDC"/><rect x="170" y="278" width="26" height="40" rx="12" fill="#B9CFDC"/>
+  <ellipse cx="136" cy="322" rx="22" ry="11" fill="#00B8A9"/><ellipse cx="184" cy="322" rx="22" ry="11" fill="#00B8A9"/>
+</g>
+</svg></div><span class="chip c1"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7.5"/><path d="M21 21l-4.3-4.3"/></svg> Consulta</span><span class="chip c2"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6z"/><polyline points="14 2 14 8 20 8"/><path d="M8 13h8M8 17h8"/></svg> Documentos</span><span class="chip c3"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 3v18h18"/><path d="M7 15v3M12 10v8M17 6v12"/></svg> Reportes</span></div></div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="section-head center rv"><div class="kicker">Así lo hacemos</div><h2>De la idea al sistema funcionando</h2><p>Ilustraciones de cómo se ven nuestras soluciones: control con QR, inventario en la nube y sitios web que convierten.</p></div>
+    <div class="grid g3 gallery">
+      <figure class="shot rv"><svg class="scene" viewBox="0 0 520 380" role="img" aria-label="Control con códigos QR" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<radialGradient id="sg1" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="#00B8A9" stop-opacity=".45"/><stop offset="1" stop-color="#00B8A9" stop-opacity="0"/></radialGradient>
+<linearGradient id="hx1" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#12405A"/><stop offset="1" stop-color="#0A2336"/></linearGradient>
+</defs>
+<circle cx="260" cy="190" r="170" fill="url(#sg1)"/>
+<circle class="orb-r r1" cx="260" cy="190" r="96" fill="none" stroke="#2DD4C4" stroke-opacity=".35" stroke-dasharray="4 8"/>
+<circle class="orb-r r2" cx="260" cy="190" r="138" fill="none" stroke="#2DD4C4" stroke-opacity=".2" stroke-dasharray="2 10"/>
+<line x1="260" y1="190" x2="92" y2="82" stroke="#2DD4C4" stroke-opacity=".28" stroke-dasharray="3 6"/><line x1="260" y1="190" x2="430" y2="96" stroke="#2DD4C4" stroke-opacity=".28" stroke-dasharray="3 6"/><line x1="260" y1="190" x2="88" y2="292" stroke="#2DD4C4" stroke-opacity=".28" stroke-dasharray="3 6"/><line x1="260" y1="190" x2="432" y2="286" stroke="#2DD4C4" stroke-opacity=".28" stroke-dasharray="3 6"/>
+<polygon points="260,120 321,155 321,225 260,260 199,225 199,155" fill="url(#hx1)" stroke="#2DD4C4" stroke-width="1.6" class="hexglow"/>
+<g transform="translate(231.0 161.0) scale(2.417)" fill="none" stroke="#2DD4C4" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><path d="M14 14h3v3h-3zM19 19h2v2h-2zM17 17h2v2h-2z"/></g>
+<g class="fl fl0"><rect x="30" y="56" width="124" height="52" rx="14" fill="#0F2A41" stroke="#2DD4C4" stroke-opacity=".35"/><rect x="40" y="68" width="28" height="28" rx="8" fill="#00B8A9" fill-opacity=".16"/><g transform="translate(46.0 74.0) scale(0.667)" fill="none" stroke="#2DD4C4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 8l-9-5-9 5v8l9 5 9-5V8z"/><path d="M3 8l9 5 9-5"/><path d="M12 13v8"/></g><text x="74" y="86" fill="#E6F1F8" font-size="11.5" font-family="Inter,Arial,sans-serif" font-weight="600">Bien</text></g><g class="fl fl1"><rect x="368" y="70" width="124" height="52" rx="14" fill="#0F2A41" stroke="#2DD4C4" stroke-opacity=".35"/><rect x="378" y="82" width="28" height="28" rx="8" fill="#00B8A9" fill-opacity=".16"/><g transform="translate(384.0 88.0) scale(0.667)" fill="none" stroke="#2DD4C4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="7" y="2" width="10" height="20" rx="2.5"/><path d="M11 18h2"/></g><text x="412" y="100" fill="#E6F1F8" font-size="11.5" font-family="Inter,Arial,sans-serif" font-weight="600">Escaneo</text></g><g class="fl fl2"><rect x="26" y="266" width="124" height="52" rx="14" fill="#0F2A41" stroke="#2DD4C4" stroke-opacity=".35"/><rect x="36" y="278" width="28" height="28" rx="8" fill="#00B8A9" fill-opacity=".16"/><g transform="translate(42.0 284.0) scale(0.667)" fill="none" stroke="#2DD4C4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6z"/><polyline points="14 2 14 8 20 8"/><path d="M8 13h8M8 17h8"/></g><text x="70" y="296" fill="#E6F1F8" font-size="11.5" font-family="Inter,Arial,sans-serif" font-weight="600">Ficha</text></g><g class="fl fl3"><rect x="370" y="260" width="124" height="52" rx="14" fill="#0F2A41" stroke="#2DD4C4" stroke-opacity=".35"/><rect x="380" y="272" width="28" height="28" rx="8" fill="#00B8A9" fill-opacity=".16"/><g transform="translate(386.0 278.0) scale(0.667)" fill="none" stroke="#2DD4C4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7.5"/><path d="M21 21l-4.3-4.3"/></g><text x="414" y="290" fill="#E6F1F8" font-size="11.5" font-family="Inter,Arial,sans-serif" font-weight="600">Búsqueda</text></g>
+<circle class="dot d1" cx="360" cy="150" r="3.5" fill="#2DD4C4"/><circle class="dot d2" cx="138" cy="220" r="3" fill="#2DD4C4"/><circle class="dot d3" cx="300" cy="310" r="2.6" fill="#fff"/>
+</svg><figcaption><b>Control con QR</b> Cada bien con su etiqueta y su ficha en un escaneo.</figcaption></figure>
+      <figure class="shot rv"><svg class="scene" viewBox="0 0 520 380" role="img" aria-label="Inventario en la nube" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<radialGradient id="sg2" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="#00B8A9" stop-opacity=".45"/><stop offset="1" stop-color="#00B8A9" stop-opacity="0"/></radialGradient>
+<linearGradient id="hx2" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#12405A"/><stop offset="1" stop-color="#0A2336"/></linearGradient>
+</defs>
+<circle cx="260" cy="190" r="170" fill="url(#sg2)"/>
+<circle class="orb-r r1" cx="260" cy="190" r="96" fill="none" stroke="#2DD4C4" stroke-opacity=".35" stroke-dasharray="4 8"/>
+<circle class="orb-r r2" cx="260" cy="190" r="138" fill="none" stroke="#2DD4C4" stroke-opacity=".2" stroke-dasharray="2 10"/>
+<line x1="260" y1="190" x2="92" y2="82" stroke="#2DD4C4" stroke-opacity=".28" stroke-dasharray="3 6"/><line x1="260" y1="190" x2="430" y2="96" stroke="#2DD4C4" stroke-opacity=".28" stroke-dasharray="3 6"/><line x1="260" y1="190" x2="88" y2="292" stroke="#2DD4C4" stroke-opacity=".28" stroke-dasharray="3 6"/><line x1="260" y1="190" x2="432" y2="286" stroke="#2DD4C4" stroke-opacity=".28" stroke-dasharray="3 6"/>
+<polygon points="260,120 321,155 321,225 260,260 199,225 199,155" fill="url(#hx2)" stroke="#2DD4C4" stroke-width="1.6" class="hexglow"/>
+<g transform="translate(231.0 161.0) scale(2.417)" fill="none" stroke="#2DD4C4" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M21 8l-9-5-9 5v8l9 5 9-5V8z"/><path d="M3 8l9 5 9-5"/><path d="M12 13v8"/></g>
+<g class="fl fl0"><rect x="30" y="56" width="124" height="52" rx="14" fill="#0F2A41" stroke="#2DD4C4" stroke-opacity=".35"/><rect x="40" y="68" width="28" height="28" rx="8" fill="#00B8A9" fill-opacity=".16"/><g transform="translate(46.0 74.0) scale(0.667)" fill="none" stroke="#2DD4C4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20a6.5 6.5 0 0 1 13 0"/><path d="M16 4.6a3.5 3.5 0 0 1 0 6.8M18 14a6.5 6.5 0 0 1 3.5 6"/></g><text x="74" y="86" fill="#E6F1F8" font-size="11.5" font-family="Inter,Arial,sans-serif" font-weight="600">Resguardos</text></g><g class="fl fl1"><rect x="368" y="70" width="124" height="52" rx="14" fill="#0F2A41" stroke="#2DD4C4" stroke-opacity=".35"/><rect x="378" y="82" width="28" height="28" rx="8" fill="#00B8A9" fill-opacity=".16"/><g transform="translate(384.0 88.0) scale(0.667)" fill="none" stroke="#2DD4C4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M7 15v3M12 10v8M17 6v12"/></g><text x="412" y="100" fill="#E6F1F8" font-size="11.5" font-family="Inter,Arial,sans-serif" font-weight="600">Reportes</text></g><g class="fl fl2"><rect x="26" y="266" width="124" height="52" rx="14" fill="#0F2A41" stroke="#2DD4C4" stroke-opacity=".35"/><rect x="36" y="278" width="28" height="28" rx="8" fill="#00B8A9" fill-opacity=".16"/><g transform="translate(42.0 284.0) scale(0.667)" fill="none" stroke="#2DD4C4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6z"/><polyline points="14 2 14 8 20 8"/><path d="M8 13h8M8 17h8"/></g><text x="70" y="296" fill="#E6F1F8" font-size="11.5" font-family="Inter,Arial,sans-serif" font-weight="600">Vales</text></g><g class="fl fl3"><rect x="370" y="260" width="124" height="52" rx="14" fill="#0F2A41" stroke="#2DD4C4" stroke-opacity=".35"/><rect x="380" y="272" width="28" height="28" rx="8" fill="#00B8A9" fill-opacity=".16"/><g transform="translate(386.0 278.0) scale(0.667)" fill="none" stroke="#2DD4C4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 18a4.5 4.5 0 0 1-.6-9A6 6 0 0 1 18 9.5 4 4 0 0 1 17.5 18H7z"/></g><text x="414" y="290" fill="#E6F1F8" font-size="11.5" font-family="Inter,Arial,sans-serif" font-weight="600">Nube</text></g>
+<circle class="dot d1" cx="360" cy="150" r="3.5" fill="#2DD4C4"/><circle class="dot d2" cx="138" cy="220" r="3" fill="#2DD4C4"/><circle class="dot d3" cx="300" cy="310" r="2.6" fill="#fff"/>
+</svg><figcaption><b>Inventario en la nube</b> Resguardos, vales y reportes desde cualquier dispositivo.</figcaption></figure>
+      <figure class="shot rv"><svg class="scene" viewBox="0 0 520 380" role="img" aria-label="Páginas web profesionales" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<radialGradient id="sg3" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="#00B8A9" stop-opacity=".45"/><stop offset="1" stop-color="#00B8A9" stop-opacity="0"/></radialGradient>
+<linearGradient id="hx3" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#12405A"/><stop offset="1" stop-color="#0A2336"/></linearGradient>
+</defs>
+<circle cx="260" cy="190" r="170" fill="url(#sg3)"/>
+<circle class="orb-r r1" cx="260" cy="190" r="96" fill="none" stroke="#2DD4C4" stroke-opacity=".35" stroke-dasharray="4 8"/>
+<circle class="orb-r r2" cx="260" cy="190" r="138" fill="none" stroke="#2DD4C4" stroke-opacity=".2" stroke-dasharray="2 10"/>
+<line x1="260" y1="190" x2="92" y2="82" stroke="#2DD4C4" stroke-opacity=".28" stroke-dasharray="3 6"/><line x1="260" y1="190" x2="430" y2="96" stroke="#2DD4C4" stroke-opacity=".28" stroke-dasharray="3 6"/><line x1="260" y1="190" x2="88" y2="292" stroke="#2DD4C4" stroke-opacity=".28" stroke-dasharray="3 6"/><line x1="260" y1="190" x2="432" y2="286" stroke="#2DD4C4" stroke-opacity=".28" stroke-dasharray="3 6"/>
+<polygon points="260,120 321,155 321,225 260,260 199,225 199,155" fill="url(#hx3)" stroke="#2DD4C4" stroke-width="1.6" class="hexglow"/>
+<g transform="translate(231.0 161.0) scale(2.417)" fill="none" stroke="#2DD4C4" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15 15 0 0 1 0 20 15 15 0 0 1 0-20z"/></g>
+<g class="fl fl0"><rect x="30" y="56" width="124" height="52" rx="14" fill="#0F2A41" stroke="#2DD4C4" stroke-opacity=".35"/><rect x="40" y="68" width="28" height="28" rx="8" fill="#00B8A9" fill-opacity=".16"/><g transform="translate(46.0 74.0) scale(0.667)" fill="none" stroke="#2DD4C4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="7" y="2" width="10" height="20" rx="2.5"/><path d="M11 18h2"/></g><text x="74" y="86" fill="#E6F1F8" font-size="11.5" font-family="Inter,Arial,sans-serif" font-weight="600">Móvil</text></g><g class="fl fl1"><rect x="368" y="70" width="124" height="52" rx="14" fill="#0F2A41" stroke="#2DD4C4" stroke-opacity=".35"/><rect x="378" y="82" width="28" height="28" rx="8" fill="#00B8A9" fill-opacity=".16"/><g transform="translate(384.0 88.0) scale(0.667)" fill="none" stroke="#2DD4C4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7.5"/><path d="M21 21l-4.3-4.3"/></g><text x="412" y="100" fill="#E6F1F8" font-size="11.5" font-family="Inter,Arial,sans-serif" font-weight="600">SEO</text></g><g class="fl fl2"><rect x="26" y="266" width="124" height="52" rx="14" fill="#0F2A41" stroke="#2DD4C4" stroke-opacity=".35"/><rect x="36" y="278" width="28" height="28" rx="8" fill="#00B8A9" fill-opacity=".16"/><g transform="translate(42.0 284.0) scale(0.667)" fill="none" stroke="#2DD4C4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l8 3v6c0 5-3.5 9-8 11-4.5-2-8-6-8-11V5l8-3z"/><polyline points="8.5 12 11 14.5 15.5 9.5"/></g><text x="70" y="296" fill="#E6F1F8" font-size="11.5" font-family="Inter,Arial,sans-serif" font-weight="600">Seguro</text></g><g class="fl fl3"><rect x="370" y="260" width="124" height="52" rx="14" fill="#0F2A41" stroke="#2DD4C4" stroke-opacity=".35"/><rect x="380" y="272" width="28" height="28" rx="8" fill="#00B8A9" fill-opacity=".16"/><g transform="translate(386.0 278.0) scale(0.667)" fill="none" stroke="#2DD4C4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a8 8 0 0 1-11.6 7.1L3 21l1.9-5.4A8 8 0 1 1 21 12z"/></g><text x="414" y="290" fill="#E6F1F8" font-size="11.5" font-family="Inter,Arial,sans-serif" font-weight="600">Contacto</text></g>
+<circle class="dot d1" cx="360" cy="150" r="3.5" fill="#2DD4C4"/><circle class="dot d2" cx="138" cy="220" r="3" fill="#2DD4C4"/><circle class="dot d3" cx="300" cy="310" r="2.6" fill="#fff"/>
+</svg><figcaption><b>Sitios web</b> Rápidos, seguros y listos para aparecer en Google.</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section class="section soft">
+  <div class="container">
+    <div class="section-head center rv"><div class="kicker">Por qué elegir DAVKARIX</div><h2>Sistemas que se usan todos los días</h2><p>No hacemos prototipos para presentación: construimos herramientas que tu equipo abre cada mañana.</p></div>
+    <div class="grid g3">
+      <div class="card rv"><div class="ico-box"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="5.5"/><circle cx="12" cy="12" r="1.2"/></svg></div><h3>A la medida de tu proceso</h3><p>Partimos de cómo trabajas hoy. El sistema se adapta a ti, no al revés.</p></div>
+      <div class="card rv"><div class="ico-box"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 18a4.5 4.5 0 0 1-.6-9A6 6 0 0 1 18 9.5 4 4 0 0 1 17.5 18H7z"/></svg></div><h3>En la nube, en cualquier dispositivo</h3><p>Accedes desde celular, tableta o computadora, sin instalar programas.</p></div>
+      <div class="card rv"><div class="ico-box"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="10" width="16" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg></div><h3>Seguridad desde el diseño</h3><p>Usuarios, roles, reglas de acceso y confirmaciones antes de cambios importantes.</p></div>
+      <div class="card rv"><div class="ico-box"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l1.9 5.6 5.6 1.9-5.6 1.9L12 18l-1.9-5.6L4.5 10.5l5.6-1.9L12 3z"/></svg></div><h3>IA aplicada con control</h3><p>Asistentes útiles y acotados, que explican lo que van a hacer antes de hacerlo.</p></div>
+      <div class="card rv"><div class="ico-box"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20a6.5 6.5 0 0 1 13 0"/><path d="M16 4.6a3.5 3.5 0 0 1 0 6.8M18 14a6.5 6.5 0 0 1 3.5 6"/></svg></div><h3>Trato directo</h3><p>Hablas con quien diseña y desarrolla tu sistema, sin intermediarios.</p></div>
+      <div class="card rv"><div class="ico-box"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M14.5 6a4.5 4.5 0 0 0 5.6 5.6L13 18.7a2.1 2.1 0 0 1-3 0l-4.7-4.7a2.1 2.1 0 0 1 0-3L12.4 3.9A4.5 4.5 0 0 0 14.5 6z"/></svg></div><h3>Acompañamiento después de la entrega</h3><p>Capacitación, soporte y mejoras para que el sistema siga sirviendo.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="section-head rv"><div class="kicker">Proyectos y demostraciones</div><h2>Míralo funcionando</h2><p>Prueba la demostración interactiva del sistema de inventario con datos ficticios y conoce lo que hemos construido.</p></div>
+    <div class="grid g3">
+      <a class="card rv" href="proyectos.html#demo"><div class="ico-box"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><path d="M14 14h3v3h-3zM19 19h2v2h-2zM17 17h2v2h-2z"/></svg></div><h3>Demo de inventario con QR</h3><p>Busca bienes, abre su ficha y ve cómo se consultaría al escanear el QR.</p><span class="more">Probar demo <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg></span></a>
+      <a class="card rv" href="https://davkarix-oficial.github.io/inveinn/" target="_blank" rel="noopener"><div class="ico-box"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 8l-9-5-9 5v8l9 5 9-5V8z"/><path d="M3 8l9 5 9-5"/><path d="M12 13v8"/></svg></div><h3>INVEINN</h3><p>Nuestro sistema de inventarios y activos con QR, con planes desde $149 MXN al mes.</p><span class="more">Ver INVEINN <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg></span></a>
+      <a class="card rv" href="ia.html#lexi"><div class="ico-box"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="8" width="16" height="11" rx="3"/><path d="M12 8V5"/><circle cx="12" cy="4" r="1"/><circle cx="9" cy="13" r="1"/><circle cx="15" cy="13" r="1"/><path d="M9 16.5h6"/></svg></div><h3>LEXI, asistente con IA</h3><p>Consulta, compara documentos y propone cambios sobre el inventario, con confirmación.</p><span class="more">Conocer a LEXI <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg></span></a>
+    </div>
+  </div>
+</section>
+
+<section class="section dark2">
+  <div class="container">
+    <div class="section-head rv"><div class="kicker">Proceso de trabajo</div><h2>De la idea a un sistema en uso</h2><p>Un proceso claro, con puntos de revisión contigo en cada etapa.</p></div>
+    <div class="steps">
+      <div class="step rv"><div class="n">01</div><h3>Diagnóstico</h3><p>Entendemos tu operación, tus datos y qué quieres lograr.</p></div>
+      <div class="step rv"><div class="n">02</div><h3>Propuesta</h3><p>Alcance, entregables, tiempos y costo por escrito.</p></div>
+      <div class="step rv"><div class="n">03</div><h3>Desarrollo</h3><p>Construimos por etapas y te mostramos avances.</p></div>
+      <div class="step rv"><div class="n">04</div><h3>Pruebas y capacitación</h3><p>Validamos contigo y capacitamos a tu equipo.</p></div>
+      <div class="step rv"><div class="n">05</div><h3>Entrega y soporte</h3><p>Puesta en marcha y acompañamiento posterior.</p></div>
+    </div>
+  </div>
+</section>
+<section class="cta"><div class="container rv"><h2>¿Listo para ordenar tu operación?</h2><p>Cuéntanos qué necesitas controlar, automatizar o digitalizar y te preparamos una propuesta.</p><div class="hero-actions"><a class="btn btn-primary" href="cotizar.html">Solicitar cotización <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg></a><a class="btn btn-ghost" href="https://wa.me/525539383342" target="_blank" rel="noopener">Escribir por WhatsApp</a></div></div></section>
+
+</main>
+<footer class="footer">
+  <div class="container">
+    <div class="foot-grid">
+      <div>
+        <a class="brand" href="index.html"><span class="brand-mark">DK</span><span class="brand-name">DAVKARIX<small>Sistemas de Identificación Avanzados</small></span></a>
+        <p style="margin-top:14px;max-width:320px">Software a medida, inventarios con QR, automatización e inteligencia artificial para empresas e instituciones en México.</p>
+      </div>
+      <div><h4>Sitio</h4><ul><li><a href="servicios.html">Servicios</a></li><li><a href="ia.html">Inteligencia artificial</a></li><li><a href="proyectos.html">Proyectos</a></li><li><a href="faq.html">Preguntas frecuentes</a></li><li><a href="cotizar.html">Solicitar cotización</a></li></ul></div>
+      <div><h4>Servicios</h4><ul><li><a href="servicios/software-a-medida.html">Desarrollo de software a medida</a></li><li><a href="servicios/inventarios-activos.html">Sistemas de inventarios y activos fijos</a></li><li><a href="servicios/control-qr.html">Control de bienes mediante códigos QR</a></li><li><a href="servicios/automatizacion.html">Automatización de procesos administrativos</a></li><li><a href="servicios/paginas-web.html">Diseño y desarrollo de páginas web</a></li><li><a href="servicios.html">Ver todos</a></li></ul></div>
+      <div><h4>Contacto</h4><ul><li><a href="mailto:davkarix.oficial@gmail.com">davkarix.oficial@gmail.com</a></li><li><a href="https://wa.me/525539383342" target="_blank" rel="noopener">WhatsApp: +52 55 3938 3342</a></li><li>México</li></ul></div>
+    </div>
+    <div class="foot-bottom"><span>© 2026 DAVKARIX · Sistemas de Identificación Avanzados</span><span><a href="privacidad.html">Aviso de privacidad</a> · <a href="terminos.html">Términos</a></span></div>
+  </div>
+</footer>
+<a class="wa-float" href="https://wa.me/525539383342?text=Hola,%20quiero%20información%20sobre%20sus%20servicios." target="_blank" rel="noopener" aria-label="Escribir por WhatsApp"><svg width="30" height="30" viewBox="0 0 24 24" fill="#fff"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.69.44 3.34 1.28 4.79L2.05 22l5.44-1.43c1.39.76 2.96 1.16 4.55 1.16h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2zm0 18.15h-.01c-1.42 0-2.82-.38-4.04-1.1l-.29-.17-3.01.79.8-2.93-.19-.3a8.26 8.26 0 0 1-1.27-4.43c0-4.54 3.7-8.24 8.25-8.24 2.2 0 4.27.86 5.83 2.42a8.18 8.18 0 0 1 2.41 5.83c0 4.55-3.7 8.13-8.48 8.13zm4.52-6.16c-.25-.12-1.47-.72-1.7-.81-.23-.08-.39-.12-.56.13-.17.25-.64.81-.78.97-.14.17-.29.19-.54.06-.25-.12-1.04-.38-1.98-1.22-.73-.65-1.23-1.46-1.37-1.71-.14-.25-.02-.38.11-.51.11-.11.25-.29.37-.43.12-.14.16-.25.25-.41.08-.17.04-.31-.02-.43-.06-.12-.56-1.35-.77-1.85-.2-.48-.41-.42-.56-.42-.14-.01-.31-.01-.48-.01-.17 0-.43.06-.66.31-.23.25-.86.84-.86 2.05s.88 2.38 1 2.55c.12.17 1.73 2.65 4.2 3.71.59.25 1.04.4 1.4.52.59.19 1.12.16 1.55.1.47-.07 1.47-.6 1.68-1.18.21-.58.21-1.08.14-1.18-.06-.11-.23-.17-.48-.29z"/></svg></a>
+<script>/* DAVKARIX — comportamiento del sitio */
+const CONFIG = {
+  WHATSAPP: '525539383342',
+  EMAIL: 'davkarix.oficial@gmail.com',
+  // Si creas un formulario en Formspree (formspree.io) pega aquí su URL, ej. 'https://formspree.io/f/xxxxxxx'
+  // Con eso el formulario envía directo a tu correo. Si queda vacío, usa WhatsApp / correo.
+  FORM_ENDPOINT: '',
+  // Medición de visitas respetuosa con la privacidad (sin cookies): crea una cuenta gratis en goatcounter.com
+  // y pon aquí tu código, ej. 'davkarix'. Si queda vacío, no se mide nada.
+  GOATCOUNTER: ''
+};
+
+/* Menú móvil */
+(function(){
+  const btn = document.getElementById('menuBtn'), nav = document.getElementById('navLinks');
+  if(!btn||!nav) return;
+  btn.addEventListener('click', ()=>{ const o = nav.classList.toggle('open'); btn.setAttribute('aria-expanded', o); });
+  nav.addEventListener('click', e=>{ if(e.target.tagName==='A'){ nav.classList.remove('open'); btn.setAttribute('aria-expanded','false'); }});
+})();
+
+/* Aparición suave */
+(function(){
+  const els = document.querySelectorAll('.rv');
+  if(!('IntersectionObserver' in window)){ els.forEach(e=>e.classList.add('in')); return; }
+  const io = new IntersectionObserver(es=>es.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); }}),{threshold:.12});
+  els.forEach(e=>io.observe(e));
+})();
+
+/* Analítica opcional sin cookies (GoatCounter) */
+(function(){
+  if(!CONFIG.GOATCOUNTER) return;
+  const s = document.createElement('script');
+  s.async = true; s.src = 'https://gc.zgo.at/count.js';
+  s.setAttribute('data-goatcounter', 'https://'+CONFIG.GOATCOUNTER+'.goatcounter.com/count');
+  document.head.appendChild(s);
+})();
+
+/* Formulario de cotización */
+(function(){
+  const form = document.getElementById('cotForm'); if(!form) return;
+  const t0 = Date.now();
+  const msg = document.getElementById('formMsg');
+  const q = new URLSearchParams(location.search);
+  if(q.get('servicio')){ const sel = form.elements.servicio; [...sel.options].forEach(o=>{ if(o.value===q.get('servicio')) sel.value=o.value; }); }
+
+  const valid = ()=>{
+    let ok = true;
+    const rules = {
+      nombre: v=>v.trim().length>=2,
+      correo: v=>/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(v.trim()),
+      servicio: v=>!!v,
+      mensaje: v=>v.trim().length>=10,
+      acepto: (v,el)=>el.checked
+    };
+    Object.keys(rules).forEach(k=>{
+      const el = form.elements[k]; const f = el.closest('.field');
+      const good = rules[k](el.value, el);
+      f.classList.toggle('bad', !good); if(!good) ok = false;
+    });
+    return ok;
+  };
+  const texto = ()=>{
+    const g = k=>form.elements[k].value.trim();
+    return `Hola DAVKARIX, quiero solicitar una cotización.\n\nNombre: ${g('nombre')}\nEmpresa: ${g('empresa')||'—'}\nCorreo: ${g('correo')}\nTeléfono: ${g('telefono')||'—'}\nServicio: ${g('servicio')}\nPresupuesto aproximado: ${g('presupuesto')||'No definido'}\n\n${g('mensaje')}`;
+  };
+  const show = (ok, t)=>{ msg.className = 'form-msg show '+(ok?'ok':'fail'); msg.textContent = t; msg.scrollIntoView({block:'nearest',behavior:'smooth'}); };
+  const spam = ()=> form.elements.website.value !== '' || (Date.now()-t0) < 3000;
+
+  async function enviar(canal){
+    if(spam()){ show(false,'Espera unos segundos y vuelve a intentar.'); return; }
+    if(!valid()){ show(false,'Revisa los campos marcados en rojo.'); return; }
+    const body = texto();
+    if(canal==='wa'){
+      window.open('https://wa.me/'+CONFIG.WHATSAPP+'?text='+encodeURIComponent(body),'_blank','noopener');
+      show(true,'Se abrió WhatsApp con tu solicitud lista. Solo presiona enviar.'); return;
+    }
+    if(canal==='mail'){
+      location.href = 'mailto:'+CONFIG.EMAIL+'?subject='+encodeURIComponent('Solicitud de cotización — '+form.elements.servicio.value)+'&body='+encodeURIComponent(body);
+      show(true,'Se abrió tu correo con la solicitud lista. Solo presiona enviar.'); return;
+    }
+    // envío directo (si hay endpoint configurado)
+    try{
+      const r = await fetch(CONFIG.FORM_ENDPOINT,{method:'POST',headers:{'Content-Type':'application/json',Accept:'application/json'},body:JSON.stringify({nombre:form.elements.nombre.value,empresa:form.elements.empresa.value,correo:form.elements.correo.value,telefono:form.elements.telefono.value,servicio:form.elements.servicio.value,presupuesto:form.elements.presupuesto.value,mensaje:form.elements.mensaje.value})});
+      if(!r.ok) throw new Error();
+      form.reset(); show(true,'¡Gracias! Recibimos tu solicitud y te responderemos pronto.');
+    }catch(e){ show(false,'No pudimos enviarla. Usa el botón de WhatsApp o escríbenos a '+CONFIG.EMAIL); }
+  }
+  form.addEventListener('submit', e=>{ e.preventDefault(); enviar(CONFIG.FORM_ENDPOINT?'direct':'wa'); });
+  form.querySelectorAll('[data-canal]').forEach(b=>b.addEventListener('click',()=>enviar(b.dataset.canal)));
+  form.querySelectorAll('input,select,textarea').forEach(el=>el.addEventListener('input',()=>el.closest('.field')&&el.closest('.field').classList.remove('bad')));
+})();
+
+/* Demo de inventario (datos ficticios) */
+(function(){
+  const tb = document.getElementById('demoBody'); if(!tb) return;
+  const D = [
+    ['Laptop 14"','Ana Morales','Oficina central','Activo','INV-000101'],
+    ['Monitor 24"','Luis Herrera','Contabilidad','Activo','INV-000102'],
+    ['Impresora láser','Sofía Ramírez','Recepción','Revisión','INV-000103'],
+    ['Escritorio ejecutivo','Carlos Vega','Dirección','Activo','INV-000104'],
+    ['Proyector','Marta Núñez','Sala de juntas','Activo','INV-000105'],
+    ['Silla ergonómica','Luis Herrera','Contabilidad','Activo','INV-000106'],
+    ['Teléfono IP','Ana Morales','Oficina central','Revisión','INV-000107'],
+    ['Router','Carlos Vega','Servidores','Activo','INV-000108']
+  ];
+  const q = document.getElementById('demoQ'), cnt = document.getElementById('demoCount');
+  const ficha = document.getElementById('ficha'), fc = document.getElementById('fichaBody');
+  const esc = s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+  function draw(){
+    const t = q.value.trim().toLowerCase();
+    const rows = D.filter(r=>!t||r.join(' ').toLowerCase().includes(t));
+    tb.innerHTML = rows.map((r,i)=>`<tr tabindex="0" data-i="${D.indexOf(r)}"><td>${esc(r[4])}</td><td>${esc(r[0])}</td><td>${esc(r[1])}</td><td><span class="estado ${r[3]==='Activo'?'a':'r'}">${r[3]}</span></td></tr>`).join('') || '<tr><td colspan="4">Sin resultados</td></tr>';
+    cnt.textContent = rows.length+' de '+D.length+' bienes (datos ficticios)';
+  }
+  function open(i){
+    const r = D[i]; if(!r) return;
+    fc.innerHTML = `<h3>${esc(r[0])}</h3><div class="qrbox" role="img" aria-label="Código QR ilustrativo"></div><dl><dt>Inventario</dt><dd>${esc(r[4])}</dd><dt>Resguardo</dt><dd>${esc(r[1])}</dd><dt>Área</dt><dd>${esc(r[2])}</dd><dt>Estado</dt><dd>${esc(r[3])}</dd></dl><p style="font-size:12.5px;color:#4F6578">Así se vería la ficha al escanear el QR del bien. QR ilustrativo, datos ficticios.</p>`;
+    ficha.classList.add('open');
+  }
+  tb.addEventListener('click',e=>{ const tr = e.target.closest('tr[data-i]'); if(tr) open(+tr.dataset.i); });
+  tb.addEventListener('keydown',e=>{ if(e.key==='Enter'){ const tr = e.target.closest('tr[data-i]'); if(tr) open(+tr.dataset.i); }});
+  q.addEventListener('input',draw);
+  ficha.addEventListener('click',e=>{ if(e.target===ficha||e.target.classList.contains('ficha-x')) ficha.classList.remove('open'); });
+  document.addEventListener('keydown',e=>{ if(e.key==='Escape') ficha.classList.remove('open'); });
+  draw();
+})();
+
+/* Orbe de luces (IA) — partículas en esfera giratoria */
+(function(){
+  const cs = document.querySelectorAll('canvas.orb'); if(!cs.length) return;
+  const reduce = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
+  cs.forEach(cv=>{
+    const ctx = cv.getContext('2d'); if(!ctx) return;
+    const N = 260, P = [];
+    for(let i=0;i<N;i++){ const y = 1-2*(i+.5)/N, r = Math.sqrt(1-y*y), th = i*2.399963; P.push([Math.cos(th)*r, y, Math.sin(th)*r, Math.random()*6.28]); }
+    let W=0,H=0,t=0,vis=true;
+    function size(){ const d = Math.min(window.devicePixelRatio||1,2), b = cv.getBoundingClientRect(); W = cv.width = Math.max(1,b.width*d); H = cv.height = Math.max(1,b.height*d); }
+    size(); addEventListener('resize', size);
+    if('IntersectionObserver' in window) new IntersectionObserver(e=>{ vis = e[0].isIntersecting; }).observe(cv);
+    function draw(){
+      if(vis){
+        ctx.clearRect(0,0,W,H);
+        const cx=W/2, cy=H/2, R=Math.min(W,H)*.43;
+        const g = ctx.createRadialGradient(cx,cy,R*.1,cx,cy,R*1.25);
+        g.addColorStop(0,'rgba(45,212,196,.28)'); g.addColorStop(.6,'rgba(0,184,169,.10)'); g.addColorStop(1,'rgba(0,184,169,0)');
+        ctx.fillStyle=g; ctx.beginPath(); ctx.arc(cx,cy,R*1.25,0,6.283); ctx.fill();
+        const ca=Math.cos(t), sa=Math.sin(t), tilt=.35, ct=Math.cos(tilt), st=Math.sin(tilt);
+        const pts = P.map(p=>{ let x=p[0]*ca+p[2]*sa, z=-p[0]*sa+p[2]*ca, y=p[1]*ct-z*st; z=p[1]*st+z*ct; return [x,y,z,p[3]]; }).sort((a,b)=>a[2]-b[2]);
+        for(const p of pts){
+          const k=(p[2]+1)/2, tw=.6+.4*Math.sin(t*4+p[3]), s=(.9+k*2.2)*(W/520);
+          ctx.globalAlpha=(.15+k*.85)*tw; ctx.fillStyle = k>.8 ? '#FFFFFF' : '#2DD4C4';
+          ctx.beginPath(); ctx.arc(cx+p[0]*R, cy+p[1]*R, s, 0, 6.283); ctx.fill();
+        }
+        ctx.globalAlpha=1;
+        if(!reduce) t+=.004;
+      }
+      if(!reduce) requestAnimationFrame(draw);
+    }
+    draw();
+  });
+})();
+</script>
+</body>
+</html>
